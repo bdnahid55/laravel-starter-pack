@@ -5,7 +5,7 @@
         <div class="login-title">
             <h2 class="text-center text-primary">Login To Application</h2>
         </div>
-        <form action="" method="POST">
+        <form action="{{ route('admin.admin-user.login-process') }}" method="POST">
             @csrf
 
             @if (Session::get('fail'))

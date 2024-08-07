@@ -22,8 +22,8 @@
                     </span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-icon-list">
-                    <li><a class="dropdown-item" href=""><i class="dw dw-user1"></i> Profile</a></li>
-                    <li><a class="dropdown-item" href=""><i class="dw dw-logout"></i> Logout</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.profile') }}"><i class="dw dw-user1"></i> Profile</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.logout') }}"><i class="dw dw-logout"></i> Logout</a></li>
                 </ul>
             </div>
         </div>
