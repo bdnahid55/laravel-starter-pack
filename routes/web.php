@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BackupController;
+
 
 
 
@@ -44,7 +46,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
             Route::get('admins/delete-admins/{id}', 'destroy')->name('admins.delete-admins'); // delete process
         });
 
-
+        // Route for Backup
+        Route::controller(BackupController::class)->group(function () {
+            Route::get('backup/create-new-backup', 'create')->name('backup.create-new-backup');
+            Route::get('backup/all-backup', 'index')->name('backup.all-backup');
+            Route::get('backup/delete-old-backup', 'destroy')->name('backup.delete-old-backup');
+            Route::get('backup/delete-all-backup', 'delete')->name('backup.delete-all-backup');
+        });
 
     // End
     });

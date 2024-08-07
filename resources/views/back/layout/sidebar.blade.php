@@ -32,6 +32,12 @@
                     <li>
                         <div class="sidebar-small-cap">Extra</div>
                     </li>
+                    <hr>
+                    <li>
+                        <a href="{{ route('admin.backup.all-backup') }}" class="dropdown-toggle no-arrow  {{ request()->routeIs('admin.backup.all-backup') ? 'active' : '' }}">
+                            <span class="micon bi bi-receipt-cutoff"></span><span class="mtext">Backups</span>
+                        </a>
+                    </li>
 
                 </ul>
             </div>
