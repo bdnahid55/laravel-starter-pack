@@ -34,6 +34,11 @@
                     </li>
                     <hr>
                     <li>
+                        <a href="{{ route('admin.permissions.index') }}" class="dropdown-toggle no-arrow  {{ request()->routeIs('admin.permissions.index') ? 'active' : '' }}">
+                            <span class="micon bi bi-receipt-cutoff"></span><span class="mtext">Manage Permissions</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="{{ route('admin.backup.all-backup') }}" class="dropdown-toggle no-arrow  {{ request()->routeIs('admin.backup.all-backup') ? 'active' : '' }}">
                             <span class="micon bi bi-receipt-cutoff"></span><span class="mtext">Backups</span>
                         </a>

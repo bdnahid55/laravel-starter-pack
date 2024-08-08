@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\BackupController;
 
 
@@ -33,6 +34,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
             Route::get('/logout', 'logout')->name('logout');
             Route::get('/profile', 'profile')->name('profile');
             Route::post('/password-update/{id}', 'updatePassword')->name('password-update');
+        });
+        // Route for permission
+        Route::controller(PermissionController::class)->group(function () {
+            Route::get('/permissions', 'index')->name('permissions.index');
+            Route::get('/permissions/{id}/edit', 'edit')->name('permissions.edit');
+            Route::post('/permissions/{id}', 'update')->name('permissions.update');
         });
 
         // Route for admin crud
